@@ -1,0 +1,4 @@
+/Debug/
+/Release/
+.settings/*
+.eclipse_cproject_patch*

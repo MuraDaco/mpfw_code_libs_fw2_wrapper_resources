@@ -1,0 +1,12 @@
+# source code file
+common/src
+mac/src
+nxp/src
+stm32f769_disco/src
+
+# cmake build files
+common/wsp/cmake
+mac/wsp/cmake
+nxp/wsp/cmake
+stm32f769_disco/wsp/cmake
+
