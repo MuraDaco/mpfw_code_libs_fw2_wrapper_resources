@@ -44,28 +44,28 @@ using namespace fw2::core::core;
 
 sdk_usart::callback_protocol_functions_t sdk_usart::g_callback_protocol_functions = {
 
-    /* .tx_buffer_management       = */ uyProtocol::tx_buffer_management,
-    /* .rx_buffer_management       = */ uyProtocol::rx_buffer_management,
+    .tx_buffer_management       = uyProtocol::tx_buffer_management,
+    .rx_buffer_management       = uyProtocol::rx_buffer_management,
     
-    /* .tx_status_get__running     = */ uyProtocol::status_get_tx__running,
-    /* .tx_status_get__completed   = */ uyProtocol::status_get_tx__completed,
-    /* .rx_status_get__running     = */ uyProtocol::status_get_rx__running,
-    /* .rx_status_get__completed   = */ uyProtocol::status_get_rx__completed,
+    .tx_status_get__running     = uyProtocol::status_get_tx__running,
+    .tx_status_get__completed   = uyProtocol::status_get_tx__completed,
+    .rx_status_get__running     = uyProtocol::status_get_rx__running,
+    .rx_status_get__completed   = uyProtocol::status_get_rx__completed,
 
-    /* .tx_status_set__free        = */ uyProtocol::status_set_tx__free,
-    /* .rx_status_set__free        = */ uyProtocol::status_set_rx__free,
-    /* .tx_status_set__running     = */ uyProtocol::status_set_tx__running,
-    /* .rx_status_set__running     = */ uyProtocol::status_set_rx__running,
+    .tx_status_set__free        = uyProtocol::status_set_tx__free,
+    .rx_status_set__free        = uyProtocol::status_set_rx__free,
+    .tx_status_set__running     = uyProtocol::status_set_tx__running,
+    .rx_status_set__running     = uyProtocol::status_set_rx__running,
 
-    /* .rx_status_get__free        = */ uyProtocol::status_get_rx__free,
-    /* .tx_status_set__completed   = */ uyProtocol::status_set_tx__completed
+    .rx_status_get__free        = uyProtocol::status_get_rx__free,
+    .tx_status_set__completed   = uyProtocol::status_set_tx__completed
 };
 
 
 uyProtocol::callback_sdk_functions_t uyProtocol::g_callback_sdk_functions = {
 
-    /* .reg_write  = */ sdk_usart::reg_write,
-    /* .reg_read   = */ sdk_usart::reg_read,
+    .reg_write  = sdk_usart::reg_write,
+    .reg_read   = sdk_usart::reg_read,
 
 };
 

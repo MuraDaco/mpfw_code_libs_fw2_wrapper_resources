@@ -1,0 +1,152 @@
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++ 
+    -g -mcpu=cortex-m7 -T STM32F769NIHX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm_20230516.map 
+    -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group 
+    CMakeFiles/stm_20230516.out.dir/__/__/__/__/__/src/stm32f769_disco/SW4STM32/startup_stm32f769xx.s.obj 
+    CMakeFiles/stm_20230516.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/main.cpp.obj 
+    CMakeFiles/stm_20230516.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/system_stm32f7xx.c.obj 
+    -o stm_20230516.out  
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_02/libfw2_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_02/libfw2_wp_kr_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/libsdk_stm32f769_disco_lib.a 
+
+
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: CMakeFiles/stm_20230516.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/main.cpp.obj: 
+in function `main': main.cpp:(.text.startup.main+0x10): undefined reference to `fw2::wrapper::resources::rsSerial::endl'
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/
+project/v_01/libfw2_wp_rs_lib.a(rsSerial.cpp.obj): in function `fw2::wrapper::resources::rsSerial::TxEnable()':
+rsSerial.cpp:(.text._ZN3fw27wrapper9resources8rsSerial8TxEnableEv+0x24): undefined reference to `UartReady'
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/
+project/v_01/libfw2_wp_rs_lib.a(rsSerial.cpp.obj): in function `fw2::wrapper::resources::rsSerial::WaitingTransferEnd()':
+rsSerial.cpp:(.text._ZN3fw27wrapper9resources8rsSerial18WaitingTransferEndEv+0xc): undefined reference to `UartReady'
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/
+project/v_01/libfw2_wp_rs_lib.a(rsSerial.cpp.obj): in function `fw2::wrapper::resources::rsSerial::Tx(char*)':
+rsSerial.cpp:(.text._ZN3fw27wrapper9resources8rsSerial2TxEPc+0x30): undefined reference to `UartHandle'
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/
+project/v_01/libfw2_wp_rs_lib.a(rsSerial.cpp.obj): in function `fw2::wrapper::resources::rsSerial::InitUART()':
+rsSerial.cpp:(.text._ZN3fw27wrapper9resources8rsSerial8InitUARTEv+0x74): undefined reference to `UartHandle'
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/
+project/v_01/libfw2_wp_rs_lib.a(stm_main.c.obj): in function `HAL_UART_TxCpltCallback':
+stm_main.c:(.text.HAL_UART_TxCpltCallback+0x8): undefined reference to `UartReady'
+
+collect2: error: ld returned 1 exit status
+make[2]: *** [main/mpfw_code_main_stm_20230516/wsp/cmake/project/subdir/v_01/stm_20230516.out] Error 1
+make[1]: *** [main/mpfw_code_main_stm_20230516/wsp/cmake/project/subdir/v_01/CMakeFiles/stm_20230516.out.dir/all] Error 2
+make: *** [all] Error 2
+
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++ 
+    -O3 -DNDEBUG -mcpu=cortex-m7 -T STM32F769NIHX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm_20230516.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb 
+    -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group 
+    CMakeFiles/stm_20230516.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/main.cpp.obj 
+    -o stm_20230516.out  
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_02/libfw2_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_02/libfw2_wp_kr_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/libsdk_stm32f769_disco_lib.a 
+
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: 
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a(stm_main.c.obj):(.bss.UserButtonStatus+0x0): 
+        multiple definition of `UserButtonStatus'; ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a(rsSerial.cpp.obj):(.bss.UserButtonStatus+0x0): 
+        first defined here
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: 
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a(stm_main.c.obj):(.bss.UartReady+0x0): 
+        multiple definition of `UartReady'; ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a(rsSerial.cpp.obj):(.bss.UartReady+0x0): 
+        first defined here
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: 
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a(stm_main.c.obj):(.bss.UartHandle+0x0): 
+        multiple definition of `UartHandle'; ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a(rsSerial.cpp.obj):(.bss.UartHandle+0x0): 
+        first defined here
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: 
+    CMakeFiles/stm_20230516.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/main.cpp.obj: in function `main':
+    main.cpp:(.text.startup.main+0x10): undefined reference to `fw2::wrapper::resources::rsSerial::endl'
+
+
+/Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++ 
+    -O3 -DNDEBUG -mcpu=cortex-m7 -T STM32F769NIHX_FLASH.ld --specs=nosys.specs -Wl,-Map=stm_20230516.map -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb 
+    -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group 
+    CMakeFiles/stm_20230516.out.dir/__/__/__/__/__/src/stm32f769_disco/Src/main.cpp.obj 
+    -o stm_20230516.out  
+    ../../../../../../../libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/v_02/libfw2_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/v_02/libfw2_wp_kr_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/libfw2_wp_rs_lib.a 
+    ../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/wsp/cmake/project/libsdk_stm32f769_disco_lib.a 
+
+
+
+
+cd /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230516/wsp/cmake/build_as_lib/stm32f769_disco/rls/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01 
+    && /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++ 
+        -DFW2_WP_RS_LIB_VERSION=1.1 -DNDEBUG -DSTM32F769xx -DUSE_HAL_DRIVER 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../main/mpfw_code_main_stm_20230516/src/stm32f769_disco/Inc 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Drivers/CMSIS/Device/ST/STM32F7xx/Include 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Drivers/CMSIS/Include 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Drivers/STM32F7xx_HAL_Driver/Inc 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Drivers/BSP/STM32F769I-Discovery 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Drivers/BSP/Components/Common 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Utilities/Log 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Utilities/Fonts 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Utilities/CPU 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Middlewares/Third_Party/FreeRTOS/Source/include 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_sdk_stm32f769_disco/src/v_01/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/cg 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/cs 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/dt/dtDef/v_00 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/kr/krEvent/v_02 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/kr/krInit/v_03 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/kr/krTimer/v_03 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/sv/svSync/v_02 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/sv/svState/v_02 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/sv/svStateMachine/v_03 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/dg/dgInterface/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/dg/dgFormatDigit/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/stm32f769_disco/src/rs/rsSerial/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../main/mpfw_code_main_stm_20230516/src/common/cg/libs/fw2_wrapper_core 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/kr/krThread/v_04 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/../../common/src/kr/krThread/v_04 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/sy/syThread/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/tb/kr/krThread/v_01 
+        -O3 -DNDEBUG -mcpu=cortex-m7 -c -std=gnu++14 -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fno-rtti -fno-exceptions -fno-use-cxa-atexit --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -std=gnu++14 
+        -MD -MT libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp.obj 
+        -MF CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp.obj.d -o CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp.obj 
+        -c /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp
+
+
+cd /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/main/mpfw_code_main_stm_20230516/wsp/cmake/build_as_lib/stm32f769_disco/rls/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01 
+    && /Users/work/Tools/stm/cube_1_10_1/arm_toolchain/ver_10_3_2021_10/tools/bin/arm-none-eabi-g++ 
+        -DFW2_WP_RS_LIB_VERSION=1.1 -DNDEBUG -DSTM32F769xx -DUSE_HAL_DRIVER 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/cg 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/cs 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/dt/dtDef/v_00 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/kr/krEvent/v_02 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/kr/krInit/v_03 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/kr/krTimer/v_03 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/sv/svSync/v_02 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/sv/svState/v_02 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/sv/svStateMachine/v_03 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/dg/dgInterface/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_core_core/src/dg/dgFormatDigit/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_resources/stm32f769_disco/src/rs/rsSerial/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../main/mpfw_code_main_stm_20230516/src/common/cg/libs/fw2_wrapper_core 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/kr/krThread/v_04 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/../../common/src/kr/krThread/v_04 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/sy/syThread/v_01 
+        -I/Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/../../../../../../../libs/mpfw_code_libs_fw2_wrapper_core/stm32f769_disco/src/tb/kr/krThread/v_01 
+        -O3 -DNDEBUG -mcpu=cortex-m7 -c -std=gnu++14 -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fno-rtti -fno-exceptions -fno-use-cxa-atexit --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -std=gnu++14 
+        -MD -MT libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/v_01/CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp.obj 
+        -MF CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp.obj.d 
+        -o CMakeFiles/fw2_wp_rs_lib.dir/__/__/__/__/__/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp.obj 
+        -c /Users/work/ObsiData/repo__main/smdl/repo__prjs/smdl/mpfw/code/mpfw_code/libs/mpfw_code_libs_fw2_wrapper_resources/stm32f769_disco/src/rs/rsSerial/v_01/rsSerial.cpp
+
+
